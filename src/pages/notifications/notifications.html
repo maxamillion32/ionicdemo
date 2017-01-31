@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Notifications
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="notification_block">
+  <ion-list>
+    <ion-item class="notification_list" detail-push *ngFor="let notif of notifications" (click)="onClickNotification(notif)">
+      <ion-label class="dateblk" fixed>{{ notif.Date }}<span>{{ notif.Time }}</span>
+      </ion-label>
+      <ion-label class="msgtext">{{ notif.Message }}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

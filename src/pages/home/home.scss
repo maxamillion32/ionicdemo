@@ -1,0 +1,237 @@
+page-home {
+
+}
+
+
+ion-header{
+	ion-navbar{
+		padding: 0;
+		color: #fff;
+		.toolbar-background {
+			background: #2497cb;
+			color: #fff;
+		}
+		.toolbar-title {
+			color: #fff;
+            text-align: center;
+		}
+		.back-button-ios {
+			color: #2497cb;
+			background: #fff;
+			border-radius: 0;
+			width: 50px !important;
+			font-size: 13px;
+			height: 22px !important;
+			text-transform: uppercase;
+			font-weight: 500;
+			position: relative;
+			margin-left: 20px;
+            min-height: 2.5rem;
+			&:before{
+				width: 13px;
+				position: absolute;
+				left: -25px;
+				content: '';
+				display: block;
+				border-right: 13px solid #fff;
+				border-top: 12px solid transparent;
+				border-bottom: 12px solid transparent;
+				top: 0;
+				bottom: 0;
+			}
+			span{
+				ion-icon{
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+
+.homepage_content{
+	ion-list{
+        .list-header {
+            text-transform: none;
+        }
+		.filterblock {
+			padding: 15px;
+            background: none;
+            .item-inner{
+                padding:0px ;
+            }
+            .input-wrapper{
+                display: block;
+            }
+			.filtertxt{
+				float: left;
+				font-size: 16px;
+				color: #5c5c5c;
+				margin-top: 10px !important;
+				// letter-spacing: 0;
+			}
+			.label {
+				margin: 0;
+			}
+            .select {
+                padding: 9px 8px 8px 16px;
+                background: #fff;
+                display: block;
+                float: right;
+                max-width: 75%;
+                width: 75%;
+                min-height: 35px;
+            }
+			.select-icon{
+				position: absolute;
+                top: 23px;
+                right: 0;
+				.select-icon-inner{
+					right: 25px;
+					left: auto;
+					border-top: 11px solid #838383;
+					border-right: 8px solid transparent;
+					border-left: 8px solid transparent;
+					top: 43%;
+				}
+			}
+		}
+		.tablehead{
+			padding: 0;
+            background: none;
+            margin-bottom: 0;
+			ion-label{
+				margin: 0;
+				width: 33.33%;
+				text-align: center;
+				flex: inherit;
+				border-bottom: 1px solid #838383;
+				border-right: 1px solid #838383;
+				line-height: 45px;
+				&:last-child{
+					border-right: none;
+				}
+			}
+		}
+		.listing_block{
+			background: #f7f7f7;
+			padding: 8px 0;
+			border-bottom: 1px solid #e4e4e4;
+			ion-label{
+				margin: 0;
+				width: 33.33%;
+				text-align: center;
+				flex: inherit;
+				color: #4e4e4e;
+				font-size: 16px;
+			}
+			.opentext{
+				color: #2497cb;
+			}
+			.blue-open {
+				color: #2497cb;
+			}
+
+			.red-closed {
+				color: #c11536;
+			}
+
+			.green-shipped {
+				color: #0ab542;
+			}
+			.item-inner{
+				padding: 0;
+				background-image: url('../assets/images/right_arrow.png');
+				background-size: 9px 16px;
+				background-repeat: no-repeat;
+                background-position: right 14px center;
+			}
+			&:nth-child(2n){
+				background: #f0f0f0;
+			}
+		}
+	}
+}
+
+
+
+@media screen and (max-width:375px){
+	.homepage_content{
+		ion-list {
+			.filterblock{
+				.filtertxt{
+					font-size: 15px;
+					margin-top: 15px;
+				}
+				ion-item{
+					min-height: 3.4rem;
+				}
+				.select-text{
+					font-size: 14px;
+				}
+				.select-icon{
+					.select-icon-inner{
+						border-top: 9px solid #838383;
+						border-right: 6px solid transparent;
+						border-left: 6px solid transparent;
+					}
+				}
+			}
+			.tablehead {
+				ion-label {
+					line-height: 37px;
+					font-size: 13px;
+				}
+			}
+			.listing_block{
+				padding: 5px 0;
+				ion-label{
+					font-size: 15px;
+				}
+				.item-inner{
+					background-size: 7px 13px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width:320px){
+	.homepage_content{
+		ion-list{
+			.filterblock{
+				.filtertxt{
+					font-size: 13px;
+					margin-top: 15px;
+				}
+				.select-text{
+					font-size: 13px;
+				}
+				.select {
+					padding: 11px 8px 8px 16px;
+				}
+				.select-icon{
+					.select-icon-inner{
+						border-top: 8px solid #838383;
+						border-right: 5px solid transparent;
+						border-left: 5px solid transparent;
+					}
+				}
+			}
+			.tablehead{
+				ion-label{
+					font-size: 10px;
+				}
+			}
+			.listing_block{
+				padding: 3px 0;
+				ion-label{
+					font-size: 13px;
+				}
+				.item-inner{
+					background-size: 5px 11px;
+				}
+			}
+		}
+	}
+}

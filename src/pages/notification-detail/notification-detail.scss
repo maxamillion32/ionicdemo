@@ -1,0 +1,48 @@
+page-notification-detail {
+	ion-list{
+		ion-item{
+			padding: 0 !important;
+			background-color: transparent !important;
+			.item-inner{
+				padding: 0 !important;
+				ion-label{
+					margin: 0;
+					font-size: 25px;
+					color: #6c6c6c
+				}
+			}
+		}
+	}
+}
+
+
+
+@media screen and (max-width:375px){
+	page-notification-detail {
+		ion-list{
+			ion-item{ 
+				.item-inner{ 
+					ion-label{ 
+						font-size: 22px; 
+					}
+				}
+			}
+		}
+	}
+}
+	
+
+@media screen and (max-width:320px){
+	page-notification-detail {
+		ion-list{
+			ion-item{ 
+				.item-inner{ 
+					ion-label{ 
+						font-size: 19px; 
+					}
+				}
+			}
+		}
+	}
+}
+	

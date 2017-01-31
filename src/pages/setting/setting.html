@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Settings
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<style media="screen">
+  .plainText {
+    text-decoration: none;
+  }
+</style>
+
+<ion-navbar *navbar>
+  <ion-title>
+    Employee Detail
+  </ion-title>
+</ion-navbar>
+
+<ion-content padding class="setting_block">
+  <ion-list no-lines>
+    <ion-list-header no-lines>
+      Language Selection
+    </ion-list-header>
+    <ion-item>
+      {{languages}}
+      <ion-select [(ngModel)]="language">
+        <ion-option *ngFor="let lan of languages" value="{{lan}}">{{lan | capitalize}}</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item class="bluebtn">
+      <button ion-button block (click)="onClickLogout()">
+        Log out
+      </button>
+    </ion-item>
+  </ion-list>
+</ion-content>

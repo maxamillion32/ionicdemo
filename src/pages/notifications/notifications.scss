@@ -1,0 +1,94 @@
+page-notifications {
+
+}
+
+
+.notification_block{
+	.notification_list{
+		background: #fff;
+		padding: 0;
+		border: none !important;
+		&:nth-child(2n){
+			background: #f7f7f7;
+		}
+		.item-inner{
+			background-image:url('../assets/images/right_arrow1.png');
+			background-repeat: no-repeat;
+			background-size: 14px 19px;
+            background-position: right 14px center;
+			padding-left: 15px;
+			display: block;
+			border: none;
+			.input-wrapper{
+				display: block;
+				padding: 20px 0;
+				ion-label{
+					flex: inherit;
+					width: 100%;
+					margin: 0 0 7px;
+				}
+				.dateblk{
+					font-size: 20px;
+					color: #2497cb;
+					span{
+						color: #545454;
+						font-size: 13px;
+						margin-left: 5px;
+					}
+				}
+				.msgtext{
+					font-size: 16px;
+					color: #545454;
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width:375px){
+	.notification_block{
+		.notification_list{
+			.item-inner{
+				background-size: 13px 17px;
+				.input-wrapper{
+					padding: 18px 0;
+						ion-label{
+							margin: 0 0 5px;
+						}
+					.dateblk{
+						font-size: 18px;
+						span{
+							font-size: 12px;
+						}
+					}
+					.msgtext{
+						font-size: 15px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width:320px){
+	.notification_block{
+		.notification_list{
+			.item-inner{
+				background-size: 11px 15px;
+				.input-wrapper{
+					padding: 14px 0;
+					.dateblk{
+						font-size: 15px;
+						span{
+							font-size: 11px;
+						}
+					}
+					.msgtext{
+						font-size: 13px;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<style media="screen">
+  .plainText {
+    text-decoration: none;
+  }
+</style>
+
+<ion-navbar *navbar>
+  <ion-title>
+    Home
+  </ion-title>
+</ion-navbar>
+
+<ion-content class="homepage_content">
+
+  <ion-list no-lines>
+    <!-- <ion-list-header no-lines > -->
+    <!-- <span class="filtertxt">Filter By :</span> -->
+    <ion-item class="filterblock">
+      <!-- {{sortOptions}} -->
+      <ion-label class="filtertxt">Filter By :</ion-label>
+      <ion-select [(ngModel)]="sortedBy" (ionChange)="onFilterChange(sortedBy)">
+        <ion-option *ngFor="let sort of sortOptions" value="{{sort}}">{{sort | capitalize}}</ion-option>
+      </ion-select>
+    </ion-item>
+    <!-- </ion-list-header> -->
+
+    <ion-list-header class="tablehead">
+      <ion-label fixed>Reference</ion-label>
+      <ion-label fixed>Create Date</ion-label>
+      <ion-label item-right>Status</ion-label>
+    </ion-list-header>
+    <ion-item detail-push *ngFor="let order of orderList" (click)="onOrderClick(order)" class="listing_block">
+      <ion-label fixed>{{ order.Reference }}</ion-label>
+      <ion-label fixed>{{ order.Date }}</ion-label>
+      <ion-label [class.blue-open]="order.Status=='Open'" [class.red-closed]="order.Status=='Closed'" [class.green-shipped]="order.Status=='Shipped'" class="opentext" item-right>{{ order.Status }}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

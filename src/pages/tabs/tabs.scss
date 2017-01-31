@@ -1,0 +1,20 @@
+.tabbar{
+	background: #fff !important;
+	.tab-button[aria-selected=true]{
+		color: #2983c1;
+		.tab-button-icon{
+			color: #2983c1;
+		}
+		.tab-button-text{
+			color: #2983c1;
+		}
+	}
+	.tab-button{ 
+		ion-icon{
+			color: #6e6e6e;
+		}
+		.tab-button-text{
+			color: #6e6e6e;
+		} 
+	}
+}

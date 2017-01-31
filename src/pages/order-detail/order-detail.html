@@ -1,0 +1,47 @@
+<!--
+  Generated template for the OrderDetail page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{currentOrder.Reference}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list no-lines *ngIf="orderDetail">
+    <ion-item>
+      <ion-label>Tracking Info : {{orderDetail.Tracking}} </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Pieces : {{orderDetail.Pieces}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Weight : {{orderDetail.Weight}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Retailer : {{orderDetail.Retailer}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Destination Address : </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>{{orderDetail.Address}}</ion-label>
+    </ion-item>
+    <ion-list-header>
+      Breakdown
+    </ion-list-header>
+    <ion-item class="qtytext" *ngFor="let item of breakdowns">{{item.Quantity}} x {{item.Sku}}</ion-item>
+    <!-- <ion-item>{{item.Quantity}} X {{item.Sku}}</ion-item> -->
+    <ion-item  class="bluebtn">
+        <button ion-button block (click)="onClickCheckDelivery()">
+          CHECK DELIVERY
+        </button>
+    </ion-item>
+  </ion-list>
+</ion-content>
